@@ -1,0 +1,186 @@
+--Заполнение таблицы Customers
+INSERT INTO dbo.Customers
+VALUES ('Google', 'Goo', 'gle', 'USA, Sacramento, CA 95815', 'Sacramento', '353555', '+55992935823', 'google@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Facebook', 'Face', 'Book', 'USA, Sacramento, CA 234235', 'Sacramento', '253555', '+45463467323', 'facebook@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Apple', 'App', 'Le', 'USA, Sacramento, CA 3453465', 'Sacramento', '556778', '+34634634', 'Apple@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Amazon', 'Ama', 'Zon', 'USA, Sacramento, CA 568568', 'Sacramento', '789345', '+3246346237', 'Amazon@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Nvidia', 'Nvi', 'Dia', 'USA, Sacramento, CA 346374325', 'Sacramento', '567234', '+546245723432', 'Nvidia@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Netflix', 'Net', 'Flix', 'USA, Sacramento, CA 8765967456', 'Sacramento', '235266', '+34573142', 'Netflix@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Microsoft', 'Micro', 'Soft', 'USA, Sacramento, CA 57457345', 'Sacramento', '567894', '+815167213452', 'Microsoft@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Intel', 'Int', 'El', 'USA, Sacramento, CA 89465794', 'Sacramento', '112233', '+9686245314', 'Intel@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Alphabet', 'Alpha', 'Bet', 'USA, Sacramento, CA 8457693549', 'Sacramento', '221133', '+57342571', 'Alphabet@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('AMD', 'A', 'Md', 'USA, Sacramento, CA 80656345', 'Sacramento', '331122', '+53683151', 'AMD@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Nokia', 'No', 'Kia', 'USA, Sacramento, CA 7569567936', 'Sacramento', '443322', '+7213571', 'Nokia@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Therapeutics', 'Thera', 'Peutics', 'USA, Sacramento, CA 79845753245', 'Sacramento', '442211', '+134517425', 'Therapeutics@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Beyond', 'Bey', 'Ond', 'USA, Sacramento, CA 52287238', 'Sacramento', '334422', '+7324572', 'Beyond@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('Tesla', 'Te', 'Sla', 'USA, Sacramento, CA 569072', 'Sacramento', '776644', '+65735467257', 'Tesla@gmail.com');
+
+INSERT INTO dbo.Customers
+VALUES ('JPMorgan', 'JP', 'Morgan', 'USA, Sacramento, CA 96459876', 'Sacramento', '889955', '+63453425712', 'JPMorgan@gmail.com');
+
+
+--Заполнение таблицы Products
+
+INSERT INTO dbo.Products
+VALUES ('loaf', '100', '6', '1', 'батон ');
+
+INSERT INTO dbo.Products
+VALUES ('cake', '777', '432', '0', 'торт');
+
+INSERT INTO dbo.Products
+VALUES ('hamburger', '2345', '324', '0', 'гамбургер');
+
+INSERT INTO dbo.Products
+VALUES ('yoghurt', '324', '13', '1', 'йогурт');
+
+INSERT INTO dbo.Products
+VALUES ('pastry', '5436', '74', '0', 'кондитерские изделия');
+
+INSERT INTO dbo.Products
+VALUES ('tin', '234', '666', '0', 'консервная банка');
+
+INSERT INTO dbo.Products
+VALUES ('candy', '456', '123', '1', 'конфета');
+
+INSERT INTO dbo.Products
+VALUES ('marmalade', '2345', '312', '1', 'мармелад');
+
+INSERT INTO dbo.Products
+VALUES ('butter', '435', '96', '1', 'масло');
+
+INSERT INTO dbo.Products
+VALUES ('honey', '73', '98', '0', 'мёд');
+
+INSERT INTO dbo.Products
+VALUES ('milk', '436', '3354', '1', 'молоко');
+
+INSERT INTO dbo.Products
+VALUES ('flour', '56', '543', '1', 'мука');
+
+INSERT INTO dbo.Products
+VALUES ('ham', '7845', '21', '0', 'окорок');
+
+INSERT INTO dbo.Products
+VALUES ('olives', '1345', '1222', '0', 'оливки');
+
+INSERT INTO dbo.Products
+VALUES ('pepper', '2662', '909', '0', 'перец');
+
+--Заполнение таблицы Orders
+INSERT INTO dbo.Orders
+VALUES ('8', DEFAULT, '12.07.2020', '21.12.2003', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('7', DEFAULT, '01.03.2020', '25.11.2006', 'P');
+
+INSERT INTO dbo.Orders
+VALUES ('6', DEFAULT, '03.07.2021', '09.03.2009', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('5', DEFAULT, '12.07.2019', '21.07.2015', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('4', DEFAULT, '13.08.2020', '30.06.1999', 'P');
+
+INSERT INTO dbo.Orders
+VALUES ('3', DEFAULT, '23.06.2020', '11.11.2011', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('2', DEFAULT, '14.05.2018', '17.04.2014', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('1', DEFAULT, '18.02.2020', '17.03.2009', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('15', DEFAULT, '09.01.2020', '01.01.2001', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('14', DEFAULT, '11.09.2020', '13.07.2009', 'P');
+
+INSERT INTO dbo.Orders
+VALUES ('13', DEFAULT, '28.06.2013', '01.09.1978', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('12', DEFAULT, '21.07.2015', '02.03.2007', 'P');
+
+INSERT INTO dbo.Orders
+VALUES ('11', DEFAULT, '09.03.2009', '03.07.2021', 'P');
+
+INSERT INTO dbo.Orders
+VALUES ('10', DEFAULT, '25.11.2006', '01.03.2020', 'C');
+
+INSERT INTO dbo.Orders
+VALUES ('9', DEFAULT, '21.12.2003', '12.07.2020', 'P');
+
+--Заполнение таблицы Items
+
+INSERT INTO dbo.Items
+VALUES ('8', '15', '456', '56243562');
+
+INSERT INTO dbo.Items
+VALUES ('7', '14', '4334', '2462');
+
+INSERT INTO dbo.Items
+VALUES ('6', '13', '123', '1241');
+
+INSERT INTO dbo.Items
+VALUES ('5', '12', '2354', '1121157');
+
+INSERT INTO dbo.Items
+VALUES ('4', '11', '463', '111524');
+
+INSERT INTO dbo.Items
+VALUES ('3', '10', '5862', '124523');
+
+INSERT INTO dbo.Items
+VALUES ('2', '1', '454', '58353');
+
+INSERT INTO dbo.Items
+VALUES ('1', '2', '607', '43623');
+
+INSERT INTO dbo.Items
+VALUES ('15', '3', '3', '234235');
+
+INSERT INTO dbo.Items
+VALUES ('14', '4', '95', '123154');
+
+INSERT INTO dbo.Items
+VALUES ('13', '5', '53', '4563325');
+
+INSERT INTO dbo.Items
+VALUES ('12', '6', '67', '207856');
+
+INSERT INTO dbo.Items
+VALUES ('11', '7', '23', '98568');
+
+INSERT INTO dbo.Items
+VALUES ('10', '8', '1431', '894369');
+
+INSERT INTO dbo.Items
+VALUES ('9', '9', '1489', '20956680');
