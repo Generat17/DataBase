@@ -1,0 +1,95 @@
+--SQL запросы для Лабораторной работы №3
+
+-- Мои таблицы Customers Items Orders Products
+
+-- a пункт (все данные из таблицы)
+--SELECT *FROM Customers
+
+-- b пункт (некоторые столбцы таблицы)
+--SELECT IdCustomer, LastName, FirstName FROM Customers;
+
+-- c пункт (использование сортировки). ASC сорт. по возрастанию, DESC по убыванию
+--SELECT *FROM Customers ORDER BY CompanyName;
+
+-- d пункт (c использованием ограничения на выборку данных)
+--SELECT TOP 5 idCustomer, CompanyName, [E-mail] FROM Customers;
+
+-- e пункт (с использованием операторов сравнения)
+--SELECT *FROM Products WHERE (InStock >= 100)
+
+--Тест GROUP BY + HAVING SELECT столбец, функция AS название FROM таблица GROUP BY столбец_для_группировки HAVING условие
+--SELECT Status, COUNT(*) AS [count orders] FROM Orders GROUP BY Status HAVING Status = 'C'
+
+-- f пункт (с использованием оператора BETWEEN - между)
+--SELECT *FROM Products WHERE InStock BETWEEN 10 AND 200
+
+-- g пункт (с использованием оператора IN, содержащий подзапрос)
+--SELECT *FROM Products WHERE IdProducts IN (4,8,9,13);
+-- можно сделать более сложный запрос, например так
+--SELECT *FROM Customers WHERE IdCustomer IN (SELECT InStock FROM Products WHERE InStock <= 15);
+
+-- h пункт (с использованием оператора LIKE и строковых функций)
+--SELECT LOWER(CompanyName) FROM  Customers WHERE CompanyName LIKE 'N%'
+
+-- i пункт (с использованием предиката IS NULL) 
+--SELECT *FROM Customers WHERE Address IS NuLL;
+
+-- j пункт (с использованием агрегатных функций) 
+--SELECT Status, COUNT(*) AS [count orders] FROM Orders GROUP BY Status
+
+-- k пункт (с использованием агрегатных функций и предложения HAVING) 
+--SELECT Status, COUNT(*) AS [count orders] FROM Orders GROUP BY Status HAVING Status = 'C'
+
+-- l пункт (выбирающий данные из нескольких таблиц с использованием соединения по предикату ) 
+--запрос возвращает Status из таблицы Orders, по связанному id и условию поиска google по таблицы Customers в столбце CompanyName c
+--SELECT Status FROM Orders JOIN Customers AS C ON(Orders.IdCustomer = C.IdCustomer) WHERE C.CompanyName = 'Google';
+
+-- m пункт (с использованием ключевого слова DISTINCT, выводит только уникальные занчения) 
+--SELECT DISTINCT PaidDate FROM Orders
+
+-- n пункт (с использованием оператора EXISTS, тут я выбираю из таблицы Customers, только те строки, у которые не связаны с таблицей Orders)  
+--SELECT * FROM Customers WHERE NOT EXISTS (SELECT 1 FROM Orders WHERE Orders.IdCustomer = Customers.IdCustomer);
+
+-- o пункт (с использованием функции IIF()) 
+--SELECT [RESULT] = IIF ((SELECT InStock FROM Products WHERE IdProducts = 2) > (SELECT InStock FROM Products WHERE IdProducts = 3), 'TRUE', 'FALSE');
+
+-- задание по варианту (вариант №1)
+-- пункт 1
+--SELECT * FROM Orders WHERE ShipDate < '20-03-2018' ORDER BY IdOrder DESC
+-- пункт 2
+--SELECT * FROM Customers WHERE NOT EXISTS (SELECT 1 FROM Orders WHERE Orders.IdCustomer = Customers.IdCustomer) ORDER BY LastName
+
+--Строковые функции
+/*
+CONCAT() Объединение строк
+LOWER(A) Приведение A к нижнему регистру
+LEFT() Возвращает строку символов указанной длины, отсчитывая слева
+LEN() Длина строки
+SUBSTRING(A,B,C) Возвращает подстроку из A, с позиции B до позиции C
+LTRIM(str) Удаляет все начальные пробелы из строки str
+RTRIM(str) Удаляет хвостовые пробелы из строки str
+REPLACE(A,B,C) Заменяет все подстроки B в строке A на подстроку C
+STRCMP() Возвращает 0, если строки одинаковые
+UPPER(A) Переводит A в верхний регистр
+*/
+
+--Агрегатные функции
+/*
+COUNT(*) Возвращает количество строк источника записей.
+COUNT(<имя поля>) Возвращает количество значений в указанном столбце.
+SUM(<имя_поля>) Возвращает сумму значений в указанном столбце.
+AVG(<имя_поля>) Возвращает среднее значение в указанном столбце.
+MIN(<имя_поля>) Возвращает минимальное значение в указанном столбце.
+MAX(<имя_поля>) Возвращает максимальное значение в указанном столбце.
+*/
+
+-- Послу SELECT можно писать следующее:
+-- ALL - могут появляться повторяющиеся элементы, является значением по умолчанию
+-- DISTINCT - в результирующем наборе возвращаются только уникальные результаты.
+-- ORDER BY - cортировка строк результирующей таблицы данных, ASC сортирует данные в восходящем порядке, DESC – в обратном
+
+--UPDATE Orders SET PaidDate = '2020-03-01' WHERE IdOrder = 10
+--DBCC CHECKIDENT ('название_таблицы', RESEED, номер_id)
+--DBCC CHECKIDENT ('Customers', RESEED, 17)
+--INSERT INTO dbo.Customers VALUES ('DocuSign', 'Docu', 'Sign', 'USA, Sacramento, CA 8885532', 'Sacramento', '666665', '+555555500712', 'DocuSign@gmail.com');
+--SELECT * FROM Customers
